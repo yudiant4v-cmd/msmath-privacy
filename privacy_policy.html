@@ -20,7 +20,12 @@
       padding: 2.5rem 2rem;
       box-shadow: 0 2px 16px rgba(0,0,0,0.07);
     }
-    .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 2rem; }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
     .logo-icon {
       width: 48px; height: 48px;
       background: #38BDF8;
@@ -46,6 +51,59 @@
     a { color: #0284C7; text-decoration: none; }
     a:hover { text-decoration: underline; }
     hr { border: none; border-top: 1px solid #E0F2FE; margin: 1.5rem 0; }
+    .delete-box {
+      background: #FFF5F5;
+      border: 1.5px solid #FCA5A5;
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+    .delete-box h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #DC2626;
+      margin-bottom: 0.75rem;
+    }
+    .delete-steps {
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    .delete-steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #374151;
+    }
+    .delete-steps li::before {
+      content: counter(step);
+      min-width: 26px;
+      height: 26px;
+      background: #0284C7;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .badge-red {
+      display: inline-block;
+      background: #FEE2E2;
+      color: #DC2626;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
   </style>
 </head>
 <body>
@@ -58,7 +116,7 @@
     <h1>Kebijakan Privasi</h1>
     <p class="updated">Terakhir diperbarui: 10 April 2026</p>
 
-    <p>Aplikasi <strong>Ms. Math</strong> dikembangkan oleh <strong>yudiant4v</strong> sebagai aplikasi edukasi matematika untuk siswa SMA. Kebijakan privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pengguna.</p>
+    <p>Aplikasi <strong>Ms. Math</strong> dikembangkan oleh <strong>Victus4v</strong> sebagai aplikasi edukasi matematika untuk siswa SMA. Kebijakan privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pengguna.</p>
 
     <h2>1. Informasi yang Kami Kumpulkan</h2>
     <p>Kami mengumpulkan informasi berikut saat kamu menggunakan aplikasi:</p>
@@ -99,7 +157,30 @@
       <li>Mengubah data profil melalui menu Pengaturan di aplikasi</li>
     </ul>
 
-    <h2>7. Perubahan Kebijakan</h2>
+    <h2 id="hapus-akun">7. Penghapusan Akun &amp; Data</h2>
+    <p>Kamu dapat meminta penghapusan akun beserta seluruh data yang terkait kapan saja tanpa dikenakan biaya apapun.</p>
+
+    <div class="delete-box">
+      <span class="badge-red">Tindakan Permanen</span>
+      <h3>Cara Meminta Penghapusan Akun</h3>
+      <ol class="delete-steps">
+        <li>Kirim email ke <a href="mailto:yudiant4v@gmail.com" style="color:#0284C7;font-weight:600;">yudiant4v@gmail.com</a> dengan subjek: <strong>"Hapus Akun Ms. Math"</strong></li>
+        <li>Sertakan <strong>alamat email</strong> yang terdaftar di akun Ms. Math kamu</li>
+        <li>Kami akan memproses permintaan dalam <strong>7 hari kerja</strong> dan mengirimkan konfirmasi ke emailmu</li>
+      </ol>
+    </div>
+
+    <p style="margin-top: 1rem;">Data yang akan dihapus setelah permintaan diproses:</p>
+    <ul>
+      <li>Akun autentikasi (email &amp; password) dari Firebase Auth</li>
+      <li>Data profil: nama, email, kelas, dan role pengguna</li>
+      <li>Seluruh progress belajar dan riwayat hasil kuis</li>
+      <li>Soal kuis yang pernah dibuat (khusus akun Admin)</li>
+    </ul>
+
+    <p><strong>Catatan:</strong> Setelah akun dihapus, data tidak dapat dipulihkan kembali. Jika ingin menggunakan Ms. Math lagi, kamu perlu mendaftar ulang.</p>
+
+    <h2>8. Perubahan Kebijakan</h2>
     <p>Kami dapat memperbarui kebijakan privasi ini sewaktu-waktu. Perubahan akan diberitahukan melalui pembaruan aplikasi. Penggunaan berkelanjutan atas aplikasi dianggap sebagai persetujuan terhadap kebijakan yang diperbarui.</p>
 
     <hr/>
@@ -107,9 +188,4 @@
     <div class="contact-box">
       <h2 style="margin-top:0;">Hubungi Kami</h2>
       <p>Jika ada pertanyaan mengenai kebijakan privasi ini, silakan hubungi:</p>
-      <p style="margin-top: 0.5rem;"><strong>yudiant4v</strong><br/>
-      Email: <a href="mailto:yudiant4v@gmail.com">yudiant4v@gmail.com</a></p>
-    </div>
-  </div>
-</body>
-</html>
+      <p styl
